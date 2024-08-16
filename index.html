@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valuation de Ações</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/LM.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Valuation de Ações</h1>
+      <form id="valuation-form">
+        <label for="acao-nome">Nome da Ação:</label>
+        <input type="text" id="acao-nome" required />
+
+        <label for="preco-atual">Preço Atual da Ação:</label>
+        <input type="number" id="preco-atual" step="0.01" required />
+
+        <label for="dpa">DPA (Dividendo por Ação):</label>
+        <input type="number" id="dpa" step="0.01" required />
+
+        <label for="lpa">LPA (Lucro por Ação):</label>
+        <input type="number" id="lpa" step="0.01" required />
+
+        <label for="vpa">VPA (Valor Patrimonial por Ação):</label>
+        <input type="number" id="vpa" step="0.01" required />
+
+        <label for="taxa-dividendo">Taxa de Dividendo (%):</label>
+        <input type="number" id="taxa-dividendo" step="0.01" value="6.00" required />
+
+        <button type="button" onclick="calcular()">Calcular</button>
+      </form>
+
+      <div id="result">
+        <h2>Resultados</h2>
+        <p id="nome-acao"></p>
+        <p id="cotacao-atual"></p>
+        <p id="preco-teto"></p>
+        <p id="valor-graham"></p>
+      </div>
+    </div>
+    <footer><strong>Desenvolvido por <a href="https://www.linkedin.com/in/vitor-lopes-657261230/" target="_blank">Vitor Lopes de Matos</a> 💻</strong></footer>
+    <script src="index.js"></script>
+  </body>
+</html>
