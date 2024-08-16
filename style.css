@@ -15,14 +15,15 @@ body {
   border-radius: 8px;
   box-shadow: 0 0 10px #2c6e49;
   max-width: 400px;
-  width: 100%;
-  margin: auto; /* Centraliza a container horizontalmente */
+  width: 90%; /* Adapta a largura para telas menores */
+  margin: 20px auto; /* Centraliza a container horizontalmente */
 }
 
 h1 {
   text-align: center;
   color: #2c6e49; /* Verde escuro */
   margin-bottom: 20px;
+  font-size: 1.5em; /* Tamanho da fonte responsivo */
 }
 
 form {
@@ -34,6 +35,7 @@ label {
   margin-bottom: 5px;
   font-weight: bold;
   color: #555;
+  font-size: 1em; /* Tamanho da fonte responsivo */
 }
 
 input[type="text"],
@@ -42,7 +44,7 @@ input[type="number"] {
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 1em; /* Tamanho da fonte responsivo */
   box-sizing: border-box;
   transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Transição suave para o efeito de foco */
 }
@@ -59,7 +61,7 @@ button {
   color: white;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 1em; /* Tamanho da fonte responsivo */
   cursor: pointer;
   margin-top: 10px;
   transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave para o background e o efeito de foco */
@@ -81,11 +83,12 @@ button:hover {
 #result h2 {
   color: #2c6e49; /* Verde escuro */
   margin-bottom: 15px;
+  font-size: 1.4em; /* Tamanho da fonte responsivo */
 }
 
 #result p {
   margin: 8px 0;
-  font-size: 16px;
+  font-size: 1em; /* Tamanho da fonte responsivo */
   color: #333;
 }
 
@@ -94,12 +97,33 @@ footer {
   padding: 10px;
   text-align: center;
   margin-top: auto;
+  font-size: 0.9em; /* Tamanho da fonte responsivo */
 }
 
 footer a {
   text-decoration: none; 
+  color: #2c6e49; /* Verde escuro */
 }
 
 footer a:hover {
   text-decoration: dashed;
+}
+
+/* Media queries para telas menores */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.2em;
+  }
+
+  label, input, button, #result h2, #result p, footer {
+    font-size: 0.9em;
+  }
+
+  button {
+    padding: 8px;
+  }
 }
